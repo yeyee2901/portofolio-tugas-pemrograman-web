@@ -1,0 +1,67 @@
+body {
+  background-color: #FFE6E6;
+}
+
+#cv-header {
+  background-color: #000000;
+}
+
+#profile-pic {
+  border: 3pt solid #FFE6E6;
+  border-radius: 80%;
+  width: 150pt;
+  transition: .3s
+}
+
+#profile-pic:hover{
+  border: 6pt solid #BD1616;
+  transform: scale(110%);
+  cursor: grab;
+}
+
+.header-text {
+  color: #FFE6E6;
+}
+
+.header-text:hover {
+  color: #BD1616;
+  cursor: grab;
+  transform: scale(150%);
+  transition: .3s;
+}
+
+.icon {
+  border: 3pt solid #FFE6E6;
+  border-radius: 80%;
+  height: 40pt;
+  width: 40pt;
+}
+
+.icon:hover {
+  border-color: #BD1616;
+  cursor: grab;
+  transform: scale(150%);
+  transition: .3s;
+}
+
+.nav-link {
+  color: #BD1616;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+#projectCarousel {
+  width: 60%;
+  height: 60%;
+}
+
+.image-carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item:hover {
+  cursor: grab;
+}
