@@ -9,7 +9,6 @@ body {
 #profile-pic {
   border: 3pt solid #FFE6E6;
   border-radius: 80%;
-  width: 150pt;
   transition: .3s
 }
 
@@ -50,6 +49,16 @@ body {
 
 .nav-link:hover {
   text-decoration: underline;
+}
+
+/* Media Query for small devices, reduce navbar font size */
+@media  (max-device-width: 736px) 
+  and   (min-device-width: 200px) {
+
+  #navbar a {
+    font-size: 9pt;
+  }
+
 }
 
 #projectCarousel {
