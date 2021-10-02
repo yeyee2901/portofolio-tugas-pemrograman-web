@@ -45,13 +45,13 @@ ajax.onreadystatechange = function() {
     const humidity = result.humidity
 
     resultContainer.innerHTML = `
-      <h2>Kota: ${query}</h2>
-      <h5>- Humidity: ${humidity.toFixed(2)}</h5>
-      <h5>- Pressure: ${pressure.toFixed(2)}</h5>
-      <h5>- Temp. Avg: ${temperature.toFixed(2)} C</h5>
-      <h5>- Temp. Max: ${temperatureMax.toFixed(2)} C</h5>
-      <h5>- Temp. Min: ${temperatureMin.toFixed(2)} C</h5>
-      <h5>- Feels: ${temperatureFeels.toFixed(2)} C</h5>
+      <p>Kota: ${query}</p>
+      <p>- Humidity: ${humidity.toFixed(2)} %</p>
+      <p>- Pressure: ${pressure.toFixed(2)}</p>
+      <p>- Temp. Avg: ${temperature.toFixed(2)} C</p>
+      <p>- Temp. Max: ${temperatureMax.toFixed(2)} C</p>
+      <p>- Temp. Min: ${temperatureMin.toFixed(2)} C</p>
+      <p>- Feels: ${temperatureFeels.toFixed(2)} C</p>
     `
   }
 

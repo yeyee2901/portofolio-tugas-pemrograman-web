@@ -1,3 +1,14 @@
 #result-container{
   width: 400px;
 }
+
+/* Media Query for small devices, reduce navbar font size */
+@media  (max-device-width: 736px) 
+  and   (min-device-width: 200px) {
+
+  #result-container{
+    width: 300px;
+    font-size: 15pt;
+  }
+
+}
