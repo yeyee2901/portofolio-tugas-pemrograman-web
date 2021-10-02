@@ -47,7 +47,7 @@ ajax.onreadystatechange = function() {
     resultContainer.innerHTML = `
       <p>Kota: ${query}</p>
       <p>- Humidity: ${humidity.toFixed(2)} %</p>
-      <p>- Pressure: ${pressure.toFixed(2)}</p>
+      <p>- Pressure: ${pressure.toFixed(2)} atm</p>
       <p>- Temp. Avg: ${temperature.toFixed(2)} &deg;C</p>
       <p>- Temp. Max: ${temperatureMax.toFixed(2)} &deg;C</p>
       <p>- Temp. Min: ${temperatureMin.toFixed(2)} &deg;C</p>
