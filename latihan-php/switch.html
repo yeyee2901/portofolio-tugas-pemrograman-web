@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <form action="switch.php" method="post" accept-charset="utf-8">
+      OS:
+      <select name="os_type" id="os_type" multiple size="1">
+        <option value="win10">Windows 10</option>
+        <option value="win8">Windows 8</option>
+        <option value="win7">Windows 7</option>
+        <option value="linux">Linux</option>
+        <option value="macos">MacOS</option>
+        <option value="unix">UNIX</option>
+        <option value="os2">OS/2</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+    Hasil uji di Firefox tidak bisa berjalan dengan benar (tombol up/down pilihan
+    tidak muncul), namun di Google Chrome tidak ada masalah.
+  </body>
+</html>
