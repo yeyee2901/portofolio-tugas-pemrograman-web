@@ -3,8 +3,12 @@
 $text = "This will be written to the file";
 $target_file = "./file2.txt";
 
-// Convenient function to read content of a file
-function dump_file_content(string $filename)
+/** 
+ * @brief Dump file content using echo
+ * will return TRUE when file is opened successfully, FALSE otherwise
+ * @return success_status
+ * */
+function dump_file_content(string $filename): bool
 {
   $file = fopen($filename, "r");
 
@@ -20,7 +24,13 @@ function dump_file_content(string $filename)
     }
 
     fclose($file);
+
+    // return true on success
+    return true;
   }
+
+  // return false on failure
+  return false;
 }
 
 // READ FILE
