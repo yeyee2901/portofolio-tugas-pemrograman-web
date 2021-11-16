@@ -1,19 +1,23 @@
 <?php
 
-// PERCOBAAN 2
+// PERCOBAAN 3
 // Query SELECT database abimanyu
 $host = "abimanyu.eng.wima.ac.id";
 $user = "5103018003";
 $pass = "5103018003";
 $database = "5103018003";
+$result = null;
 
 $conn = mysqli_connect($host, $user, $pass, $database);
 $table_name = "dokter";
 $q = "SELECT * FROM $table_name";
 
-// simpan result (error || result obj)
-$result = mysqli_query($conn, $q);
-
+// lakukan query SELECT jika koneksi berhasil
+if (!$conn) {
+  die("<h1 style='color: red;'>DB-CONN ERROR</h1><br>");
+} else {
+  $result = mysqli_query($conn, $q);
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,43 +28,44 @@ $result = mysqli_query($conn, $q);
   <meta name="viewport" content="width=device-width">
   <title>Percobaan SELECT</title>
   <style type="text/css" media="screen">
-    table,td,tr {
+    table,
+    td,
+    tr {
       border: 1px solid black;
       border-collapse: collapse;
       padding: 2%;
     }
-
   </style>
 
 </head>
 
+
 <body>
-  <table>
-    <thead>
-      <td>
-        <h3>ID dokter</h3>
-      </td>
-      <td>
-        <h3>Nama</h3>
-      </td>
-      <td>
-        <h3>Alamat</h3>
-      </td>
-      <td>
-        <h3>Domisili</h3>
-      </td>
-      <td>
-        <h3>Tanda Pengenal</h3>
-      </td>
-      <td>
-        <h3>Keahlian</h3>
-      </td>
-    </thead>
+  <!-- Tampilkan result jika koneksi berhasil & query berhasil -->
+  <?php if ($result and $conn) : ?>
+    <table>
+      <thead>
+        <td>
+          <h3>ID dokter</h3>
+        </td>
+        <td>
+          <h3>Nama</h3>
+        </td>
+        <td>
+          <h3>Alamat</h3>
+        </td>
+        <td>
+          <h3>Domisili</h3>
+        </td>
+        <td>
+          <h3>Tanda Pengenal</h3>
+        </td>
+        <td>
+          <h3>Keahlian</h3>
+        </td>
+      </thead>
 
-    <tbody>
-
-      <!-- Cek result -->
-      <?php if ($result) : ?>
+      <tbody>
         <?php $result = mysqli_fetch_all($result, MYSQLI_ASSOC); ?>
         <?php foreach ($result as $dokter) : ?>
           <tr>
@@ -73,12 +78,11 @@ $result = mysqli_query($conn, $q);
           </tr>
         <?php endforeach; ?>
       <?php else : ?>
+        <?= "<h1 style='color: red;'>QUERY ERROR</h1><br>"; ?>
         <?= mysqli_error($conn); ?>
-      <?php endif; ?>
-    </tbody>
-
-  </table>
-
+      </tbody>
+    </table>
+  <?php endif; ?>
 </body>
 
 </html>
