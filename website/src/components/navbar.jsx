@@ -43,6 +43,7 @@ const Navbar = () => {
       <Stack
         direction={{ base: 'column', md: 'row' }}
         display={{ base: 'flex', md: 'none' }}
+        align="center"
       >
         {LinkItems}
       </Stack>
