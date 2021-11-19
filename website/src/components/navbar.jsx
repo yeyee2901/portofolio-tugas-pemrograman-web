@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react'
 
 const LinkItem = ({ text, href }) => {
-  const is_active = useLocation().pathname === `${href}`
+  const is_active = useLocation().pathname === href
   const active_bg = is_active ? "blue" : "white"
   const active_color = is_active ? "white" : "none"
 
@@ -34,8 +34,8 @@ const Navbar = () => {
   const LinkItems = (
     <>
       <LinkItem text="Home" href="/" />
-      <LinkItem text="About" href="/about" />
       <LinkItem text="Works" href="/works" />
+      <LinkItem text="About" href="/about" />
     </>
   )
   return (
