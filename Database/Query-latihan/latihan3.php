@@ -1,12 +1,11 @@
 <?php
-
 // PERCOBAAN 3
 // Query SELECT database abimanyu
 $host = "abimanyu.eng.wima.ac.id";
 $user = "5103018003";
 $pass = "5103018003";
 $database = "5103018003";
-$result = null;
+$result = null; // pre instantiate
 
 $conn = mysqli_connect($host, $user, $pass, $database);
 $table_name = "dokter";
@@ -67,6 +66,8 @@ if (!$conn) {
 
       <tbody>
         <?php $result = mysqli_fetch_all($result, MYSQLI_ASSOC); ?>
+        <?= "<h3>Query:</h3>" ?>
+        <?= $q ?>
         <?php foreach ($result as $dokter) : ?>
           <tr>
             <td> <?= $dokter["id_dokter"] ?> </td>

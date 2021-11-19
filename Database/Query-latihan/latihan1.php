@@ -1,4 +1,6 @@
 <?php
+// PERCOBAAN 1
+// Koneksi ke database @abimanyu
 $host = "abimanyu.eng.wima.ac.id";
 $user = "5103018003";
 $pass = "5103018003";

@@ -1,6 +1,6 @@
 <?php
-
-// Latihan 4: Query DELETE
+// PERCOBAAN 4
+// Query DELETE
 $host = "abimanyu.eng.wima.ac.id";
 $user = "5103018003";
 $pass = "5103018003";
@@ -10,7 +10,7 @@ $conn = mysqli_connect($host, $user, $pass, $database);
 
 $table_name = "dokter";
 
-// delete yang namanya mirip
+// delete yang namanya mengandung (%nama%)
 $q = "
   DELETE FROM $table_name WHERE
     nama LIKE '%Gabriel%'

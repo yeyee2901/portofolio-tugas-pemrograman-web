@@ -1,10 +1,8 @@
 <?php
-
-$NUM_LOOP = 50;
-
 // PERCOBAAN 2
 // Query INSERT database abimanyu
-// 1. insert ke tabel 'dokter'
+$NUM_LOOP = 10;
+
 $host = "abimanyu.eng.wima.ac.id";
 $user = "5103018003";
 $pass = "5103018003";
